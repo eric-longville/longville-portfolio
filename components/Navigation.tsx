@@ -10,7 +10,6 @@ import { siteConfig } from '@/config/site';
 export default function Navigation() {
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -25,8 +24,6 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 60);
-
       const docHeight = document.documentElement.scrollHeight;
       const viewportHeight = window.innerHeight;
       const scrollable = docHeight - viewportHeight;
@@ -52,40 +49,11 @@ export default function Navigation() {
         />
       </div>
 
-      {/* Nav wrapper — handles the full-width vs floating pill layout */}
-      <div
-        className={`fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-          isScrolled ? 'top-4 px-4' : 'top-[2px] px-0'
-        }`}
-      >
-        <nav
-          className={`transition-all duration-300 ease-in-out backdrop-blur-xl ${
-            isScrolled
-              ? 'mx-auto max-w-fit rounded-full shadow-lg px-4 py-2 border border-[var(--accent)]/20 bg-[var(--background)]/85'
-              : 'w-full rounded-none px-0 py-0 border-b border-[var(--border)] bg-[var(--background)]/80'
-          }`}
-        >
+      {/* Nav wrapper — always floating pill */}
+      <div className="fixed left-0 right-0 top-4 z-50 px-4">
+        <nav className="mx-auto max-w-fit rounded-full shadow-lg px-4 py-2 border border-[var(--accent)]/20 bg-[var(--background)]/85 backdrop-blur-xl">
           {/* Main nav row */}
-          <div
-            className={`flex items-center transition-all duration-300 ease-in-out ${
-              isScrolled ? 'gap-2' : 'max-w-7xl mx-auto px-6 py-4 justify-between'
-            }`}
-          >
-            {/* Logo — hides when scrolled */}
-            <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                isScrolled ? 'max-w-0 opacity-0 mr-0' : 'max-w-[200px] opacity-100 mr-0'
-              }`}
-            >
-              <Link
-                href="/"
-                className="text-xl font-semibold hover:text-[var(--accent)] transition-colors whitespace-nowrap"
-                tabIndex={isScrolled ? -1 : 0}
-              >
-                {siteConfig.home.logo}
-              </Link>
-            </div>
-
+          <div className="flex items-center gap-2">
             {/* Desktop nav links */}
             <div className="hidden md:flex items-center gap-1">
               {navItems.map((item) => (
@@ -109,9 +77,7 @@ export default function Navigation() {
             {/* Desktop theme toggle */}
             <button
               onClick={toggleTheme}
-              className={`hidden md:flex items-center justify-center p-2 rounded-full hover:bg-[var(--muted)] transition-colors ${
-                isScrolled ? 'ml-2' : 'ml-0'
-              }`}
+              className="hidden md:flex items-center justify-center p-2 rounded-full hover:bg-[var(--muted)] transition-colors ml-2"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
@@ -120,7 +86,7 @@ export default function Navigation() {
             {/* Mobile hamburger button */}
             <button
               onClick={() => setMobileOpen((prev) => !prev)}
-              className="md:hidden flex items-center justify-center p-2 rounded-full hover:bg-[var(--muted)] transition-colors ml-auto"
+              className="md:hidden flex items-center justify-center p-2 rounded-full hover:bg-[var(--muted)] transition-colors"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
@@ -131,9 +97,9 @@ export default function Navigation() {
 
         {/* Mobile dropdown */}
         <div
-          className={`md:hidden mx-auto mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`md:hidden mx-auto mt-2 max-w-fit overflow-hidden transition-all duration-300 ease-in-out ${
             mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-          } ${isScrolled ? 'max-w-fit' : 'max-w-7xl'}`}
+          }`}
         >
           <div className="rounded-2xl shadow-lg border border-[var(--accent)]/20 bg-[var(--background)]/90 backdrop-blur-xl px-4 py-3 flex flex-col gap-1">
             {navItems.map((item) => (
@@ -174,7 +140,7 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Spacer so page content starts below the nav */}
+      {/* Spacer so page content starts below the floating pill */}
       <div className="h-[65px]" />
     </>
   );
