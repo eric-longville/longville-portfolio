@@ -97,8 +97,8 @@ export default function Navigation() {
 
         {/* Mobile dropdown */}
         <div
-          className={`md:hidden mx-auto mt-2 max-w-fit overflow-hidden transition-all duration-300 ease-in-out ${
-            mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+          className={`md:hidden mx-auto mt-2 w-[240px] transition-all duration-300 ease-in-out ${
+            mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
           <div className="rounded-2xl shadow-lg border border-[var(--accent)]/20 bg-[var(--background)]/90 backdrop-blur-xl px-4 py-3 flex flex-col gap-1">
