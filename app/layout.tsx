@@ -18,16 +18,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-row min-h-screen">
             <Navigation />
-            <main className="flex-1">
-              {children}
-            </main>
-            <footer className="border-t border-[var(--border)] py-8 mt-20">
-              <div className="max-w-7xl mx-auto px-6 text-center text-sm text-[var(--muted-foreground)]">
-                <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-              </div>
-            </footer>
+            {/* ml-14 offsets the collapsed sidebar width on desktop; pb-16 offsets the bottom tab bar on mobile */}
+            <div className="flex flex-col flex-1 md:ml-14 pb-16 md:pb-0">
+              <main className="flex-1">
+                {children}
+              </main>
+              <footer className="border-t border-[var(--border)] py-8 mt-20">
+                <div className="max-w-7xl mx-auto px-6 text-center text-sm text-[var(--muted-foreground)]">
+                  <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+                </div>
+              </footer>
+            </div>
           </div>
         </ThemeProvider>
       </body>
