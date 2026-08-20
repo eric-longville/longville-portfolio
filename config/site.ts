@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Eric Longville",
-  title: "Software Engineering Manager & Leader",
-  description: "Building high-performing teams and scalable systems",
-  
+  title: "Engineering Leader | AI & Product Development",
+  description: "Engineering leader with 14+ years building AI, web, and interactive-entertainment products — and the teams behind them.",
+
   // Navigation
   nav: {
     home: { label: "Home", href: "/" },
@@ -14,65 +14,84 @@ export const siteConfig = {
 
   // Social Links
   social: {
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourprofile",
-    email: "your.email@example.com",
+    linkedin: "https://linkedin.com/in/ericlongville",
+    github: "https://github.com/yourprofile", // TODO: add your GitHub (resume has none) or remove this button
+    email: "eric.longville@gmail.com",
   },
 
   // Home Page Content
   home: {
     logo: "logo/LongvilleLogo.png", // Your initials or logo text
     heading: "Engineering Leader",
-    subheading: "Building the Future of Technology",
-    missionStatement: "I lead high-performing engineering teams to build scalable, innovative solutions that drive business impact. With a focus on technical excellence, team growth, and strategic vision, I transform complex challenges into elegant systems that serve millions of users.",
-    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
+    subheading: "AI & Product Development",
+    missionStatement: "Engineering leader with 14+ years building products, teams, and scalable systems across AI, web, and interactive entertainment. I pair hands-on technical depth with people leadership, architecture, and cross-functional execution — turning ambitious ideas into production-ready products. Most recently focused on private AI infrastructure, RAG, and LLM-powered applications.",
+    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop", // TODO: replace with a real photo of you (e.g. /images/profile.jpg)
   },
 
   // About Page Content
   about: {
-    introduction: "I'm a passionate software engineering leader with over 10 years of experience building and scaling engineering teams. My approach combines technical depth with people-first leadership, fostering environments where engineers thrive and innovation flourishes.",
-    
+    introduction: "I'm an engineering leader with 14+ years of experience building products, teams, and scalable systems across AI, web, and interactive entertainment. My approach combines hands-on technical depth with people-first leadership — architecture, hiring, and cross-functional execution — with a track record of turning ambitious ideas into production-ready products. Most recently I've been focused on private AI infrastructure, RAG, and LLM-powered applications.",
+
     workExperience: [
       {
-        company: "Tech Company",
-        position: "VP of Engineering",
-        period: "2020 - Present",
-        description: "Leading 50+ engineers across multiple teams. Scaled infrastructure to support 10M+ users. Implemented agile practices that increased delivery velocity by 40%.",
+        company: "SHU.ai",
+        position: "Principal Software Engineering Manager",
+        period: "Apr 2026 - Aug 2026",
+        description: "Founding member of SHU.ai, an early-stage private AI infrastructure startup. Helped build the product from the ground up across frontend, backend, AI/RAG workflows, customer onboarding, billing, and production infrastructure — owning major product surfaces end-to-end.",
         achievements: [
-          "Built engineering culture from ground up",
-          "Reduced time-to-market by 35%",
-          "Mentored 15+ senior engineers"
+          "Owned the architecture and 0-to-1 delivery of the Personal Knowledge Base platform, letting users attach private, persistent knowledge directly to AI conversations",
+          "Architected the AI usage and cost-observability platform, tracking credits, tokens, model usage, and per-user/model cost drilldowns with provider-sourced LLM pricing",
+          "Hardened core AI/RAG workflows by eliminating long-lived DB transactions around LLM streaming, embeddings, retrieval, and Stripe, improving scalability and failure recovery"
         ]
       },
       {
-        company: "Startup Inc",
-        position: "Engineering Manager",
-        period: "2018 - 2020",
-        description: "Managed cross-functional teams of 20 engineers. Led migration from monolith to microservices architecture. Established DevOps practices and CI/CD pipelines.",
+        company: "Everi Holdings Inc.",
+        position: "Manager, Software Development - Principal",
+        period: "Sep 2022 - Nov 2025",
+        description: "Led the cross-functional Innovations Team within Everi Digital, building HTML5 iGaming titles — including non-traditional formats such as a reel-less slot design — while working daily with creative, QA, compliance, and third-party stakeholders.",
         achievements: [
-          "Improved deployment frequency by 10x",
-          "Reduced production incidents by 60%",
-          "Grew team from 8 to 20 engineers"
+          "Shipped 15 titles, including Stellar Bounties — nominated for the EKG Slot Awards Most Innovative Online Game of 2024",
+          "Stood up new micro-services for Everi's first-ever digital table games and guided 4 titles, including Jinzi Roulette (EKG Slot Awards nominee, 2025)",
+          "Owned hiring for a growing engineering team and refined the team's workflow and release process to increase output while upholding quality"
         ]
       },
       {
-        company: "Software Solutions",
-        position: "Senior Software Engineer",
-        period: "2015 - 2018",
-        description: "Full-stack development and technical leadership. Architected core platform features serving enterprise clients. Mentored junior developers and conducted technical interviews.",
+        company: "American Greetings",
+        position: "Software Engineering Manager - Interactive Products",
+        period: "May 2016 - Sep 2022",
+        description: "Manager and technical lead for the company's entire suite of Unity projects and web-based interactive products under the Jacquie Lawson brand, owning planning and technical delivery across Creative, UI, and QA.",
         achievements: [
-          "Designed scalable API architecture",
-          "Improved system performance by 3x",
-          "Led adoption of modern tech stack"
+          "Released the Jacquie Lawson Nordic, Country Cottage, London, and Sussex Advent Calendars (Unity)",
+          "Served as technical lead on the Jacquie Lawson Curio Collection, built with Pixi.js and TypeScript",
+          "Led a yearlong effort converting 300+ Flash-based e-cards into an HTML5-friendly format"
+        ]
+      },
+      {
+        company: "SEGA Networks Inc.",
+        position: "Game Engineer",
+        period: "Mar 2015 - Mar 2016",
+        description: "Assisted in porting and reskinning a popular Japanese mobile app, retooling it for launch in America.",
+        achievements: [
+          "Converted in-game scenes to new assets and added new functionality",
+          "Heavily tested all features ahead of the U.S. launch"
+        ]
+      },
+      {
+        company: "KIXEYE",
+        position: "Quality Engineer / Software Engineer",
+        period: "Sep 2012 - Jan 2015",
+        description: "Head QA analyst and quality engineer for an unreleased project built in Unreal Engine 4.",
+        achievements: [
+          "Wrote a suite of functional, performance, and regression tests that ran daily"
         ]
       }
     ],
 
     technicalSkills: {
-      leadership: ["Team Building", "Agile/Scrum", "Technical Strategy", "Mentoring", "Stakeholder Management"],
-      architecture: ["Microservices", "Cloud Architecture", "System Design", "API Design", "DevOps"],
-      technologies: ["React", "Node.js", "Python", "TypeScript", "Go", "Kubernetes", "AWS", "PostgreSQL"],
-      practices: ["CI/CD", "Code Review", "Technical Writing", "Architecture Reviews", "Performance Optimization"]
+      leadership: ["Team Leadership", "Mentorship (Player-Coach)", "Hiring & Recruitment", "Global Team Coordination", "Stakeholder Management", "Executive Reporting"],
+      architecture: ["System Design", "LLM Application Development", "RAG & Embeddings", "AI Agents", "API Integrations", "Cloud Infrastructure (AWS)", "Scalability & Web Performance"],
+      technologies: ["Python", "FastAPI", "PostgreSQL", "TypeScript", "Node.js", "React", "Next.js", "C#", "C++", "Java", "Unity", "Unreal Engine", "Pixi.js"],
+      practices: ["Prompt Engineering", "Agile (Scrum/Kanban)", "CI/CD", "Git", "Jenkins", "Workflow Automation", "Release Management", "SDLC Management"]
     }
   },
 
@@ -80,38 +99,48 @@ export const siteConfig = {
   workProjects: [
     {
       id: 1,
-      title: "Enterprise Platform Modernization",
-      description: "Led the complete overhaul of a legacy monolithic system serving 5M users, migrating to a scalable microservices architecture with zero downtime.",
+      title: "SHU.ai — Private AI Platform (0-to-1)",
+      description: "As a founding member, helped build SHU's private, enterprise-focused AI platform from the ground up — spanning frontend, backend, AI/RAG workflows, onboarding, billing, and production infrastructure.",
       images: [
         "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop"
       ],
-      tags: ["Architecture", "Leadership", "Cloud"],
-      details: "This multi-year initiative involved coordinating 6 engineering teams, establishing new DevOps practices, and implementing a phased migration strategy. The new architecture reduced infrastructure costs by 40% while improving system reliability to 99.99% uptime."
+      tags: ["AI/RAG", "Architecture", "0-to-1"],
+      details: "Owned major product surfaces end-to-end — user interface, APIs, data layer, AI workflows, and supporting infrastructure — plus significant portions of SHU's public web presence, including pricing and signup integrations, major site redesigns, production releases, and SEO."
     },
     {
       id: 2,
-      title: "Real-Time Analytics Dashboard",
-      description: "Built a comprehensive real-time analytics platform processing 100K events per second, providing actionable insights to business stakeholders.",
+      title: "Everi Digital — Innovations Team",
+      description: "Led the cross-functional Innovations Team in creating HTML5 iGaming slot titles with non-traditional features, including a reel-less design.",
       images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
       ],
-      tags: ["Data Engineering", "React", "Real-time"],
-      details: "Designed and implemented a stream processing pipeline using Apache Kafka and built an intuitive dashboard that became the primary decision-making tool for executives. The system handles billions of events monthly with sub-second latency."
+      tags: ["Leadership", "HTML5", "iGaming"],
+      details: "Shipped 15 titles including Stellar Bounties, nominated for the EKG Slot Awards Most Innovative Online Game of 2024. Interfaced daily with stakeholders, creative, QA, and compliance to keep design features aligned with internal, customer, and regulatory requirements, while refining the team's workflow and release process."
     },
     {
       id: 3,
-      title: "Mobile-First E-commerce Platform",
-      description: "Architected and launched a mobile-first e-commerce platform that achieved $10M in revenue within the first year.",
+      title: "Everi Digital — Digital Table Games",
+      description: "Organized the creation of brand-new micro-services to bring Everi's first-ever digital table games into the existing remote gaming server.",
       images: [
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      ],
+      tags: ["Microservices", "Game Engine", "Leadership"],
+      details: "Guided the creation of 4 titles, including Jinzi Roulette — nominated for the EKG Slot Awards Top Performing New Online Table Game of 2025. Also partnered with third-party firms to bring their concepts to life within our own game engine, aligning on features, design, and schedule with internal and external stakeholders."
+    },
+    {
+      id: 4,
+      title: "Jacquie Lawson Interactive Products",
+      description: "Manager and technical lead for American Greetings' suite of Unity and web-based interactive products under the Jacquie Lawson brand.",
+      images: [
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&h=600&fit=crop"
       ],
-      tags: ["Mobile", "Product", "Growth"],
-      details: "Led a team of 15 engineers to build a performant, conversion-optimized platform. Implemented advanced caching strategies, progressive web app features, and A/B testing framework that drove continuous optimization."
+      tags: ["Unity", "Pixi.js", "Interactive"],
+      details: "Released the Jacquie Lawson Nordic, Country Cottage, London, and Sussex Advent Calendars in Unity, and served as technical lead on the Pixi.js/TypeScript Curio Collection. Translated business requirements into prioritized engineering work, delegated across developers, and architected core application components — including a yearlong effort converting 300+ Flash e-cards to HTML5."
     }
   ],
 
@@ -119,39 +148,41 @@ export const siteConfig = {
   aiProjects: [
     {
       id: 1,
-      title: "Automated Code Review Assistant",
-      description: "Developing an AI-powered code review tool that analyzes pull requests and provides intelligent feedback on code quality, security, and best practices.",
+      title: "Personal Knowledge Base & RAG Platform",
+      description: "Architected and delivered SHU's Personal Knowledge Base platform from 0-to-1, enabling users to create private knowledge and attach it directly to AI conversations.",
       images: [
-        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=600&fit=crop"
       ],
-      tags: ["LLM", "DevOps", "Automation"],
-      details: "This experiment uses GPT-4 to analyze code changes, identify potential issues, and suggest improvements. Early results show 30% reduction in review cycle time while maintaining code quality standards."
+      tags: ["RAG", "LLM", "Architecture"],
+      details: "The platform lets users persist knowledge across sessions, prevent duplicate ingestion, preview and manage documents, and convert conversations into reusable knowledge — with persistent knowledge attachments and session-context visibility woven into the chat experience."
     },
     {
       id: 2,
-      title: "Team Productivity Insights",
-      description: "Building an ML model to predict team capacity and identify bottlenecks in the development process using historical data and sentiment analysis.",
+      title: "AI Usage & Cost-Observability Platform",
+      description: "Built SHU's AI usage and cost-observability platform with both customer and administrator experiences for tracking spend across models and providers.",
       images: [
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
       ],
-      tags: ["Machine Learning", "Analytics", "Leadership"],
-      details: "Combining project management data, git analytics, and team surveys to create predictive models for sprint planning. The system provides actionable recommendations for resource allocation and risk mitigation."
+      tags: ["LLM Ops", "Observability", "Stripe"],
+      details: "Tracks credits, tokens, requests, model usage, and plan consumption, with per-user and per-model cost drilldowns, integrating provider-sourced LLM pricing to give teams a clear view of where AI spend is going."
     },
     {
       id: 3,
-      title: "Intelligent Documentation Generator",
-      description: "Experimenting with AI to automatically generate and maintain technical documentation from code comments and system architecture.",
+      title: "Resilient RAG & LLM Streaming",
+      description: "Improved scalability and reliability across SHU's core AI/RAG workflows by rethinking how streaming, retrieval, and external calls handle failure.",
       images: [
         "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=600&fit=crop"
       ],
-      tags: ["NLP", "Documentation", "Developer Experience"],
-      details: "Using a combination of static analysis and LLMs to keep documentation in sync with code changes. The tool generates architecture diagrams, API documentation, and onboarding guides automatically."
+      tags: ["RAG", "Streaming", "Reliability"],
+      details: "Eliminated long-lived database transactions around LLM streaming, embeddings, RAG retrieval, Stripe, and external service calls; strengthened chat-stream lifecycle handling, provider fallback behavior, streaming cancellation, durable handling of disconnected clients, and production failure recovery."
     }
   ],
 
   // Gallery Images
+  // TODO: These are stock placeholder photos. Replace the url/alt/caption with your own images
+  // (add files to public/images/ and reference them like "/images/talk.jpg").
   gallery: [
     {
       id: 1,
@@ -163,12 +194,12 @@ export const siteConfig = {
       id: 2,
       url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
       alt: "Conference speaking",
-      caption: "Speaking at tech conference"
+      caption: "Speaking at a tech event"
     },
     {
       id: 3,
       url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      alt: "Code review session",
+      alt: "Pair programming",
       caption: "Pair programming session"
     },
     {

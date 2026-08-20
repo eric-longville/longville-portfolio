@@ -56,6 +56,25 @@ a {
   }
 }
 
+/* Ambient symbol field — ultra-slow twinkle between two faint opacities.
+   Each icon sets its own --o-min/--o-max/--o-mid, duration, and delay so the
+   field shimmers gently instead of pulsing in unison. */
+@keyframes symbol-twinkle {
+  0%,
+  100% {
+    opacity: var(--o-min);
+  }
+  50% {
+    opacity: var(--o-max);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .symbol-field span {
+    animation: none !important;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

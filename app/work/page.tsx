@@ -16,7 +16,7 @@ export default function Work() {
       >
         <h1 className="text-5xl font-bold mb-4">Work</h1>
         <p className="text-xl text-[var(--muted-foreground)] max-w-3xl">
-          A showcase of major projects and initiatives I've led throughout my career.
+          A showcase of major projects and initiatives I&apos;ve led throughout my career.
           Each project represents complex challenges solved through technical innovation
           and strategic leadership.
         </p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
+import SymbolField from "@/components/SymbolField";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
+          <SymbolField />
           <div className="flex flex-row min-h-screen">
             <Navigation />
             {/* ml-14 offsets the collapsed sidebar width on desktop; pb-16 offsets the bottom tab bar on mobile */}
