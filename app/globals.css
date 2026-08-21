@@ -56,6 +56,32 @@ a {
   }
 }
 
+/* Shared tag/badge pill — bordered + tinted so it reads as a pill, not text.
+   color-mix keeps it legible in both themes off the single --accent token. */
+@layer components {
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+    background-color: color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+
+  .dark .tag-pill {
+    /* brighter fill + text on dark backgrounds where deep maroon gets lost */
+    color: color-mix(in srgb, var(--accent) 58%, #ffffff);
+    border-color: color-mix(in srgb, var(--accent) 78%, transparent);
+    background-color: color-mix(in srgb, var(--accent) 34%, transparent);
+  }
+}
+
 /* Ambient symbol field — ultra-slow twinkle between two faint opacities.
    Each icon sets its own --o-min/--o-max/--o-mid, duration, and delay so the
    field shimmers gently instead of pulsing in unison. */

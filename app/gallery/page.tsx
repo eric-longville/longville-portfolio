@@ -35,14 +35,14 @@ export default function Gallery() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.05, duration: 0.4 }}
             onClick={() => setSelectedImage(index)}
-            className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
+            className="relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer group"
           >
             <Image
               src={image.url}
               alt={image.alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover transition-transform duration-300 group-hover:scale-110"
-              unoptimized
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end p-4">
               <p className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -70,13 +70,13 @@ export default function Gallery() {
             <X size={24} className="text-white" />
           </button>
 
-          <div className="relative max-w-5xl w-full aspect-[4/3]">
+          <div className="relative max-w-lg w-full aspect-[4/5]">
             <Image
               src={siteConfig.gallery[selectedImage].url}
               alt={siteConfig.gallery[selectedImage].alt}
               fill
+              sizes="(max-width: 768px) 100vw, 512px"
               className="object-contain"
-              unoptimized
             />
           </div>
 
@@ -87,18 +87,6 @@ export default function Gallery() {
           </div>
         </motion.div>
       )}
-
-      {/* Add Image Note */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.6 }}
-        className="mt-12 p-6 bg-[var(--muted)] border border-[var(--border)] rounded-xl"
-      >
-        <p className="text-sm text-[var(--muted-foreground)]">
-          <strong>Note:</strong> To add more images, edit the <code className="px-2 py-1 bg-[var(--background)] rounded">gallery</code> array in <code className="px-2 py-1 bg-[var(--background)] rounded">config/site.ts</code>
-        </p>
-      </motion.div>
     </div>
   );
 }

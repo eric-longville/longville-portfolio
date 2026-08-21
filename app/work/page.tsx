@@ -2,7 +2,7 @@
 
 import { siteConfig } from '@/config/site';
 import { motion } from 'framer-motion';
-import ProjectCard from '@/components/ProjectCard';
+import WorkCard from '@/components/WorkCard';
 
 export default function Work() {
   return (
@@ -23,30 +23,19 @@ export default function Work() {
       </motion.div>
 
       {/* Projects Grid */}
-      <div className="grid gap-8">
+      <div className="grid gap-6 md:grid-cols-2">
         {siteConfig.workProjects.map((project) => (
-          <ProjectCard
+          <WorkCard
             key={project.id}
             title={project.title}
             description={project.description}
             images={project.images}
             tags={project.tags}
-            details={project.details}
+            href={'href' in project ? project.href : undefined}
+            cta={'cta' in project ? project.cta : undefined}
           />
         ))}
       </div>
-
-      {/* Add Project Note */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.6 }}
-        className="mt-12 p-6 bg-[var(--muted)] border border-[var(--border)] rounded-xl"
-      >
-        <p className="text-sm text-[var(--muted-foreground)]">
-          <strong>Note:</strong> To add more projects, edit the <code className="px-2 py-1 bg-[var(--background)] rounded">workProjects</code> array in <code className="px-2 py-1 bg-[var(--background)] rounded">config/site.ts</code>
-        </p>
-      </motion.div>
     </div>
   );
 }

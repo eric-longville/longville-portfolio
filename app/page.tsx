@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import HeroCarousel from '@/components/HeroCarousel';
 
 export default function Home() {
   return (
@@ -86,18 +87,8 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="relative"
           >
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/20 to-transparent z-10" />
-              <Image
-                src={siteConfig.home.profileImage}
-                alt={siteConfig.name}
-                fill
-                className="object-cover"
-                priority
-                unoptimized
-              />
-            </div>
-            
+            <HeroCarousel images={siteConfig.home.heroImages} alt={siteConfig.name} />
+
             {/* Decorative elements */}
             <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-[var(--accent)]/10 rounded-full blur-3xl" />
             <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
