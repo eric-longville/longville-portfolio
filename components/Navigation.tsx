@@ -28,16 +28,13 @@ export default function Navigation() {
 
   return (
     <>
-      {/* ── Desktop sidebar ────────────────────────────────────────── */}
-      <aside className="group hidden md:flex fixed left-0 top-0 h-screen w-14 hover:w-48 z-50 flex-col border-r border-[var(--border)] bg-[var(--background)]/90 backdrop-blur-lg transition-all duration-200 ease-in-out overflow-hidden">
+      {/* ── Desktop sidebar (always open, icon over label) ──────────── */}
+      <aside className="hidden md:flex fixed left-0 top-0 h-screen w-20 z-50 flex-col border-r border-[var(--border)] bg-[var(--background)]/90 backdrop-blur-lg">
 
         {/* Logo / initials */}
-        <div className="flex items-center h-16 px-3 shrink-0 border-b border-[var(--border)]">
-          <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--accent)]/15 text-[var(--accent)] text-sm font-bold shrink-0">
+        <div className="flex items-center justify-center h-16 shrink-0 border-b border-[var(--border)]">
+          <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[var(--accent)]/15 text-[var(--accent)] text-sm font-bold">
             EL
-          </span>
-          <span className="ml-3 text-sm font-semibold whitespace-nowrap opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto transition-all duration-200 ease-in-out overflow-hidden">
-            {siteConfig.name}
           </span>
         </div>
 
@@ -49,7 +46,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative flex items-center h-10 px-3 mx-1 rounded-lg transition-colors duration-150 hover:bg-[var(--accent)]/10 hover:text-[var(--accent)] ${
+                className={`relative flex flex-col items-center justify-center gap-1 mx-2 py-2.5 rounded-lg transition-colors duration-150 hover:bg-[var(--accent)]/10 hover:text-[var(--accent)] ${
                   active
                     ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
                     : 'text-[var(--foreground)]'
@@ -57,10 +54,10 @@ export default function Navigation() {
               >
                 {/* Left accent bar for active item */}
                 {active && (
-                  <span className="absolute left-0 top-1/2 -translate-y-1/2 -ml-1 w-1 h-6 rounded-r bg-[var(--accent)]" />
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-8 w-1 rounded-r bg-[var(--accent)]" />
                 )}
-                <span className="shrink-0">{navIcons[item.href]}</span>
-                <span className="ml-3 text-sm font-medium whitespace-nowrap opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto transition-all duration-200 ease-in-out overflow-hidden">
+                {navIcons[item.href]}
+                <span className="text-[10px] font-medium leading-tight text-center">
                   {item.label}
                 </span>
               </Link>
@@ -72,14 +69,12 @@ export default function Navigation() {
         <div className="shrink-0 border-t border-[var(--border)] p-2">
           <button
             onClick={toggleTheme}
-            className="flex items-center h-10 w-full px-3 rounded-lg hover:bg-[var(--muted)] transition-colors"
+            className="flex w-full flex-col items-center justify-center gap-1 py-2.5 rounded-lg text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors"
             aria-label="Toggle theme"
           >
-            <span className="shrink-0">
-              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-            </span>
-            <span className="ml-3 text-sm font-medium whitespace-nowrap opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto transition-all duration-200 ease-in-out overflow-hidden">
-              {theme === 'light' ? 'Dark mode' : 'Light mode'}
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            <span className="text-[10px] font-medium">
+              {theme === 'light' ? 'Dark' : 'Light'}
             </span>
           </button>
         </div>
