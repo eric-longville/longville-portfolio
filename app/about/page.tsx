@@ -17,12 +17,12 @@ export default function About() {
         <h1 className="text-5xl font-bold mb-6">About Me</h1>
         
         {/* Social Links */}
-        <div className="flex gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-8">
           <a
             href={siteConfig.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 border border-[var(--border)] rounded-lg hover:bg-[var(--muted)] transition-colors"
+            className="inline-flex w-full sm:w-auto justify-center sm:justify-start items-center gap-2 px-4 py-2 border border-[var(--border)] rounded-lg hover:bg-[var(--muted)] transition-colors"
           >
             <Linkedin size={20} />
             LinkedIn
@@ -32,7 +32,7 @@ export default function About() {
             href={siteConfig.social.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 border border-[var(--border)] rounded-lg hover:bg-[var(--muted)] transition-colors"
+            className="inline-flex w-full sm:w-auto justify-center sm:justify-start items-center gap-2 px-4 py-2 border border-[var(--border)] rounded-lg hover:bg-[var(--muted)] transition-colors"
           >
             <Github size={20} />
             GitHub
@@ -40,7 +40,7 @@ export default function About() {
           </a>
           <a
             href={`mailto:${siteConfig.social.email}`}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--accent)] text-white rounded-lg hover:opacity-90 transition-opacity"
+            className="inline-flex w-full sm:w-auto justify-center sm:justify-start items-center gap-2 px-4 py-2 bg-[var(--accent)] text-white rounded-lg hover:opacity-90 transition-opacity"
           >
             <Mail size={20} />
             Email Me

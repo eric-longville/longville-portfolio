@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
 import SymbolField from "@/components/SymbolField";
 import { siteConfig } from "@/config/site";
+import { Analytics } from "@vercel/analytics/next";
 
 // Display face for headings/titles; body face for everything else.
 const sora = Sora({
@@ -20,7 +21,7 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://ericlongville.vercel.app";
+const siteUrl = "https://ericlongville.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -83,6 +84,7 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -268,6 +268,30 @@ export const siteConfig = {
       url: "/images/gallery/slide_03_couple_4x5.jpg",
       alt: "Eric with his partner outdoors",
       caption: "My love <3"
+    },
+    {
+      id: 9,
+      url: "/images/gallery/slide_09_couple_selfie_4x5.jpg",
+      alt: "Eric and his partner on a sunny day",
+      caption: "The two of us"
+    },
+    {
+      id: 10,
+      url: "/images/gallery/slide_10_waterfall_4x5.jpg",
+      alt: "Eric and his partner at a waterfall",
+      caption: "Chasing waterfalls"
+    },
+    {
+      id: 11,
+      url: "/images/gallery/slide_11_dog_touchdown_4x5.jpg",
+      alt: "Eric's golden retriever in front of the Puppy Bowl",
+      caption: "Puppy Bowl Sunday"
+    },
+    {
+      id: 12,
+      url: "/images/gallery/slide_12_fountain_4x5.jpg",
+      alt: "Eric and his partner at Bethesda Fountain, Central Park",
+      caption: "Central Park"
     }
   ],
 
