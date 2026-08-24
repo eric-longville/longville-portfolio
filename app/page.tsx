@@ -19,15 +19,19 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="inline-block relative">
-              <div className="absolute inset-0 blur-2xl opacity-50 bg-[var(--accent)]" />
+            <div className="relative inline-block mb-2">
+              {/* tight brand-accent aura — sits behind as a rim, not a wash */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 md:w-36 md:h-36 rounded-full bg-[var(--accent)]/35 blur-2xl dark:w-44 dark:h-44 dark:md:w-52 dark:md:h-52 dark:bg-[#f3e8dd]/18 dark:blur-2xl"
+              />
               <Image
-                src="/logo/LongvilleLogo.png"
+                src="/logo/LongvilleLogo@3x.png"
                 alt="Longville Logo"
-                width={400}
-                height={120}
-                className="mb-2 w-auto h-24 md:h-32 relative z-10 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
+                width={168}
+                height={264}
                 priority
+                className="relative z-10 h-24 md:h-32 w-auto drop-shadow-[0_3px_10px_rgba(0,0,0,0.35)] dark:[filter:brightness(1.08)_drop-shadow(0_0_5px_rgba(240,240,240,0.42))_drop-shadow(0_0_18px_rgba(235,220,210,0.22))]"
               />
             </div>
 
@@ -94,22 +98,6 @@ export default function Home() {
             <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
           </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="flex justify-center mt-20"
-        >
-          <div className="w-6 h-10 border-2 border-[var(--border)] rounded-full flex justify-center p-2">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"
-            />
-          </div>
-        </motion.div>
       </div>
     </div>
   );

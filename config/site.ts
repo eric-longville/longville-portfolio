@@ -15,7 +15,7 @@ export const siteConfig = {
   // Social Links
   social: {
     linkedin: "https://linkedin.com/in/ericlongville",
-    github: "https://github.com/yourprofile", // TODO: add your GitHub (resume has none) or remove this button
+    github: "https://github.com/eric-longville",
     email: "eric.longville@gmail.com",
   },
 
@@ -109,7 +109,7 @@ export const siteConfig = {
   workProjects: [
     {
       id: 1,
-      title: "SHU.ai — Private AI Platform (0-to-1)",
+      title: "SHU.ai — Private AI Platform",
       description: "As a founding member, helped build SHU's private, enterprise-focused AI platform from the ground up — spanning frontend, backend, AI/RAG workflows, onboarding, billing, and production infrastructure.",
       images: [
         "/images/SHU/SHU_Banner.png",
@@ -166,17 +166,52 @@ export const siteConfig = {
     }
   ],
 
-  // AI Projects — personal AI experiments (in progress + planned). Separate from
-  // professional work (SHU lives under Work → /showcase/shu). Add entries like:
-  //   {
-  //     title: "My experiment",
-  //     status: "In Progress",           // "In Progress" | "Planned" | "Exploring"
-  //     description: "What it is / what I'm exploring.",
-  //     tags: ["LLM", "Agents"],         // optional
-  //     href: "https://github.com/...",  // optional (repo / demo / write-up)
-  //     image: "/images/experiments/foo.png", // optional (16:9)
-  //   }
-  aiProjects: [] as {
+  // AI Projects — personal AI experiments (cards on /ai-projects). Separate from
+  // professional work (SHU lives under Work → /showcase/shu).
+  //   status: "In Progress" | "Planned" | "Exploring"  (drives the colored status dot)
+  //   href/image optional; an href makes the whole card a link (adds the ↗ icon).
+  aiProjects: [
+    {
+      title: "AI & ML Coursework",
+      status: "In Progress",
+      description:
+        "Structured, hands-on study of modern AI — machine learning, prompt engineering, generative AI, AI engineering, LLMs, and RAG. Certified through IBM (Generative AI & LLMs) and Vanderbilt (AI Agents & Agentic AI, Prompt Engineering, and Claude Code for software engineering), with more coursework ongoing.",
+      tags: ["LLMs", "RAG", "Agents", "Prompt Engineering"],
+      image: "/images/AI_Experiments/MachineLearning.png",
+    },
+    {
+      title: "Craps Lab — Strategy Simulator",
+      status: "Planned",
+      description:
+        "Run betting systems across millions of dice rolls to see how they really perform. Configure a bankroll, table rules, and strategy, then compare systems on shared roll sequences with analytics for profit, drawdown, risk of ruin, and bet-level attribution — all from a deterministic, seeded engine so every run is reproducible.",
+      tags: ["Monte Carlo", "TypeScript", "Data Viz"],
+      image: "/images/AI_Experiments/CrapsLab.png",
+    },
+    {
+      title: "Road to the Show",
+      status: "Planned",
+      description:
+        "A visual tracker for MLB draft classes that follows every pick from draft day, through the minors, to the majors along a scenic 'road.' Explore a team's class, filter by level or round, and open any player for stats, milestones, and development history — the whole journey at a glance.",
+      tags: ["Next.js", "Data Viz", "PostgreSQL"],
+      image: "/images/AI_Experiments/RoadToTheShow.png",
+    },
+    {
+      title: "Aurebesh Scanner & Translator",
+      status: "Planned",
+      description:
+        "Point your camera at Star Wars' Aurebesh script and translate it to English. A trained glyph classifier recognizes each character and reports its confidence, backed by a synthetic data pipeline that renders thousands of augmented glyphs — rotation, blur, lighting, perspective — so it holds up on real-world signage.",
+      tags: ["Computer Vision", "PyTorch", "Next.js"],
+      image: "/images/AI_Experiments/AurebeshTranslator.png",
+    },
+    {
+      title: "This Portfolio Site",
+      status: "In Progress",
+      description:
+        "My first real AI experiment — this very site. Designed and built hand-in-hand with an AI coding agent, it has gone through many iterations across layout, theming, animation, and content, and it keeps evolving. Every section is a testbed for pairing with AI on real front-end work.",
+      tags: ["Next.js", "Claude Code", "Design"],
+      image: "/images/AI_Experiments/PortfolioSite.png",
+    },
+  ] as {
     title: string;
     status: string;
     description: string;
@@ -233,7 +268,7 @@ export const siteConfig = {
       id: 8,
       url: "/images/gallery/slide_03_couple_4x5.jpg",
       alt: "Eric with his partner outdoors",
-      caption: "Off the clock"
+      caption: "My love <3"
     }
   ],
 

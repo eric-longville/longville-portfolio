@@ -17,23 +17,21 @@ export interface WorkCardProps {
 export default function WorkCard({ title, description, images, tags, href, cta }: WorkCardProps) {
   const body = (
     <>
-      {/* Thumbnail — 16:9 shown in full (source is 16:9, so no crop) */}
-      <div className="flex items-center p-4 sm:w-[42%] sm:shrink-0 sm:pr-0">
-        <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--muted)]">
-          <Image
-            src={images[0]}
-            alt={title}
-            fill
-            sizes="(max-width: 768px) 100vw, 260px"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
+      {/* Banner — full-width 16:9 on top (source is 16:9, so no crop) */}
+      <div className="relative w-full aspect-video shrink-0 overflow-hidden border-b border-[var(--border)] bg-[var(--muted)]">
+        <Image
+          src={images[0]}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, 600px"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col p-5 sm:pl-4">
+      <div className="flex flex-1 flex-col p-5">
         <h3 className="text-lg font-bold">{title}</h3>
-        <p className="mt-1.5 text-sm leading-relaxed text-[var(--foreground)]/70 line-clamp-2">
+        <p className="mt-1.5 text-sm leading-relaxed text-[var(--foreground)]/70">
           {description}
         </p>
 
@@ -63,7 +61,7 @@ export default function WorkCard({ title, description, images, tags, href, cta }
   );
 
   const cardClass =
-    'group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--card)] transition-shadow hover:shadow-xl sm:flex-row';
+    'group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--card)] transition-shadow hover:shadow-xl';
 
   return (
     <motion.div

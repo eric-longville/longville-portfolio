@@ -20,8 +20,7 @@ export default function Gallery() {
       >
         <h1 className="text-5xl font-bold mb-4">Gallery</h1>
         <p className="text-xl text-[var(--muted-foreground)] max-w-3xl">
-          A visual collection of moments from conferences, team events, and day-to-day
-          life as an engineering leader.
+          A visual collection of moments from life!
         </p>
       </motion.div>
 
