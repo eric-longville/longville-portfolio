@@ -95,7 +95,7 @@ export default function Home() {
 
             {/* Decorative elements */}
             <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-[var(--accent)]/10 rounded-full blur-3xl" />
-            <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
+            <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-[var(--accent)]/10 rounded-full blur-3xl" />
           </motion.div>
         </div>
       </div>

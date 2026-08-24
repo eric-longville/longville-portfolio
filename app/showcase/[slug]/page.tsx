@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const showcase = siteConfig.showcases.find((s) => s.slug === slug);
   return {
-    title: showcase ? `${showcase.company} — ${siteConfig.name}` : siteConfig.name,
+    title: showcase?.company,
   };
 }
 

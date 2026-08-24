@@ -21,7 +21,6 @@ export const siteConfig = {
 
   // Home Page Content
   home: {
-    logo: "logo/LongvilleLogo.png", // Your initials or logo text
     heading: "Eric Longville",
     subheading: "Engineering Leader · AI & Product Development",
     missionStatement: "Engineering leader with 14+ years building products, teams, and scalable systems across AI, web, and interactive entertainment. I pair hands-on technical depth with people leadership, architecture, and cross-functional execution — turning ambitious ideas into production-ready products. Most recently focused on private AI infrastructure, RAG, and LLM-powered applications.",
